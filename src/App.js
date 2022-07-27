@@ -1,17 +1,15 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import MainPage from "./components/MainPage.js";
+import { Routes, Route } from "react-router-dom";
+import MainPage from "./components/MainPage";
 import Page1 from "./components/Page1";
 
 function App() {
   return (
     <div className="container">
-      <Router>
-        <Routes>
-          <Route path="/" element={<MainPage />} />
-          <Route path="/page1" element={<Page1 />} />
-        </Routes>
-      </Router>
+      <Routes>
+        <Route exact path="/" element={<MainPage />} />
+        <Route exact path="/page1" element={<Page1 />} />
+      </Routes>
     </div>
   );
 }
